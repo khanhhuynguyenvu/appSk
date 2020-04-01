@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from sklearn import datasets, svm
+import numpy as np
 
 app = Flask(__name__)
 
@@ -17,3 +18,11 @@ def hello():
 @app.route('/')
 def index():
 	return "Hi"
+
+@app.route('/a')
+def gen():
+	return np.arange(1,1000)
+
+@app.route('/b')
+def gen():
+	return list(np.arange(1,1000))
