@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-from sklearn import datasets, svm
+from flask import Flask
+# from sklearn import datasets, svm
 
 app = Flask(__name__)
 
@@ -12,10 +12,10 @@ app = Flask(__name__)
 #     clf.fit(digits.data[:-1], digits.target[:-1])
 #     prediction = clf.predict(digits.data[-1:])
 
-#     return jsonify({'prediction': repr(prediction)})
-@app.route('/hi')
-def hi():
-	return "hello may cung"
+    # return jsonify({'prediction': repr(prediction)})
+@app.route('/')
+def index():
+	return "<h1>Deployed to Heroku !!! </h1>"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
