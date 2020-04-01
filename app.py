@@ -20,9 +20,9 @@ def index():
 	return "Hi"
 
 @app.route('/a')
-def gen():
+def genArray():
 	return np.arange(1,1000)
 
 @app.route('/b')
-def gen():
+def genList():
 	return list(np.arange(1,1000))
