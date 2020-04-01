@@ -19,10 +19,7 @@ def hello():
 def index():
 	return "Hi"
 
-@app.route('/a')
-def genArray():
-	return jsonify(result=np.arange(1,1000))
-
 @app.route('/b')
 def genList():
-	return jsonify(result=list(np.arange(1,1000)))
+	arr = np.arrange(1000)
+	return ", ".join(map(str,arr))
