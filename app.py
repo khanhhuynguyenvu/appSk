@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from sklearn import datasets, svm
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def hello():
     prediction = clf.predict(digits.data[-1:])
 
     return jsonify({'prediction': repr(prediction)})
-    
+
 @app.route('/')
 def index():
 	return "Hi"
