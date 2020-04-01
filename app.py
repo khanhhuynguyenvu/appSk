@@ -21,5 +21,5 @@ def index():
 
 @app.route('/b')
 def genList():
-	arr = np.arrange(1000)
+	arr = np.arange(1000)
 	return ", ".join(map(str,arr))
