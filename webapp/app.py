@@ -13,6 +13,9 @@ def hello():
     prediction = clf.predict(digits.data[-1:])
 
     return jsonify({'prediction': repr(prediction)})
+@app.route('/hi')
+def hi():
+	return "hello may cung"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
