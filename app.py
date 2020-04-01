@@ -15,7 +15,4 @@ app = Flask(__name__)
     # return jsonify({'prediction': repr(prediction)})
 @app.route('/')
 def index():
-	return "<h1>Deployed to Heroku !!! </h1>"
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+	return "Hi"
