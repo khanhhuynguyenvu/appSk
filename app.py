@@ -21,8 +21,8 @@ def index():
 
 @app.route('/a')
 def genArray():
-	return np.arange(1,1000)
+	return jsonify(result=np.arange(1,1000))
 
 @app.route('/b')
 def genList():
-	return list(np.arange(1,1000))
+	return jsonify(result=list(np.arange(1,1000)))
