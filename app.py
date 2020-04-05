@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Response
 from sklearn import datasets, svm
 from flask_cors import CORS
 import numpy as np
@@ -28,4 +28,9 @@ def genList():
 @app.route('/post/<int:postId>')
 def getPostId(postId):
 	return "Post Id %" + str(postId)
+
+@app.route('/get/<int:idx>')
+def getNum(idx):
+	result = {'idx': str(idx)}
+	return Response(result, status=200, mimetype='application/json')
 
