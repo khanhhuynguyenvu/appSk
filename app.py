@@ -31,6 +31,5 @@ def getPostId(postId):
 
 @app.route('/get/<int:idx>')
 def getNum(idx):
-	result = {'idx': '1010'}
-	return Response(result, status=200, mimetype='application/json')
+	return RResponse("{'a':'b'}", status=201, mimetype='application/json')
 
