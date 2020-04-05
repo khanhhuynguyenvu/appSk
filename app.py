@@ -31,5 +31,5 @@ def getPostId(postId):
 
 @app.route('/get/<int:idx>')
 def getNum(idx):
-	return Response("{'a':'b'}", status=200, mimetype='application/json')
+	return jsonify(value=idx), 200
 
