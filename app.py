@@ -23,3 +23,7 @@ def index():
 def genList():
 	arr = np.arange(int(1e6))
 	return ", ".join(map(str,arr))
+@app.route('/post/<int:postId>')
+def getPostId(postId):
+	return "Post Id %" postId
+
