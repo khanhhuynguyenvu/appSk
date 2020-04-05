@@ -25,5 +25,5 @@ def genList():
 	return ", ".join(map(str,arr))
 @app.route('/post/<int:postId>')
 def getPostId(postId):
-	return "Post Id %" postId
+	return "Post Id %" + str(postId)
 
